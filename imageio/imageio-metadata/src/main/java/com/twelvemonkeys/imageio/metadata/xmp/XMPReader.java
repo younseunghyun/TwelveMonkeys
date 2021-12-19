@@ -112,8 +112,8 @@ public final class XMPReader extends MetadataReader {
         factory.setAttribute(XMLConstants.FEATURE_SECURE_PROCESSING, true);
 
         // Security: Remove possibility to access external DTDs or Schema, not needed for XMP
-        factory.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, "");
-        factory.setAttribute(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
+        factory.setAttribute("http://javax.xml.XMLConstants/property/accessExternalDTD", "");
+        factory.setAttribute("http://javax.xml.XMLConstants/property/accessExternalSchema", "");
 
         // Security: Disable loading of external DTD and entities, not needed for XMP
         factory.setFeature("http://xml.org/sax/features/external-general-entities", false);
