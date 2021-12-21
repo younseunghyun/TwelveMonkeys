@@ -550,23 +550,23 @@ public class PSDImageReaderTest extends ImageReaderAbstractTest<PSDImageReader> 
                 // one of green_bag layer, Group 1 copy
                 if(layerInfo.getLayerId() == 40){
                     assertEquals(layerInfo.groupLayerId == 42, true);
-                    assertEquals(layerInfo.isGroup, false);
-                    assertEquals(layerInfo.isSectionDivider, false);
+                    assertEquals(layerInfo.group, false);
+                    assertEquals(layerInfo.sectionDivider, false);
                 }
 
                 // green_bag group layer
                 if(layerInfo.getLayerId() == 42){
                     assertEquals(layerInfo.groupLayerId == null, true);
-                    assertEquals(layerInfo.isGroup, true);
-                    assertEquals(layerInfo.isSectionDivider, false);
-                    assertEquals(layerInfo.isSectionDivider, false);
+                    assertEquals(layerInfo.group, true);
+                    assertEquals(layerInfo.sectionDivider, false);
+                    assertEquals(layerInfo.sectionDivider, false);
                 }
 
                 // green_bag layer divider
                 if(layerInfo.getLayerId() == 43){
                     assertEquals(layerInfo.groupLayerId == null, true);
-                    assertEquals(layerInfo.isGroup, false);
-                    assertEquals(layerInfo.isSectionDivider, true);
+                    assertEquals(layerInfo.group, false);
+                    assertEquals(layerInfo.sectionDivider, true);
                 }
             }
         }
